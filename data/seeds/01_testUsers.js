@@ -5,17 +5,14 @@ exports.seed = function(knex) {
     {
       username: "groot",
       password: "Iamgroot!",
-      role: 1,
     },
     {
       username: "admin",
       password: "keepitsecret,keepitsafe.",
-      role: 1,
     },
     {
       username: "me",
       password: "changethepass",
-      role: 2,
     },
     {
       username: "nobody",
@@ -23,8 +20,8 @@ exports.seed = function(knex) {
     },
     {
       username: "notme",
-      password: "hasnorole",
+      password: "hasarole",
     },
   ];
-      return knex('table_name').insert(users);
+      return knex('users').insert(users);
 };
